@@ -122,7 +122,7 @@ i {
 
 /* Responsive View */
 
-@media screen and (min-width: 720px) and (max-width: 1150px) {
+@media screen and (min-width: 720px) and (max-width: 1480px) {
     .about_container {
         /* width: 100%; */
         height: auto;

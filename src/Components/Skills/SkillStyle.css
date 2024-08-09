@@ -1,0 +1,96 @@
+.skill_container {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill_sub_container {
+    width: 85%;
+    height: auto;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill_card {
+    width: 23%;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    background: #fbfafa;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+.skill_card:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* Enhanced shadow */
+}
+
+.skill_card img {
+    width: 75px;
+}
+
+.skill_card h2 {
+    margin-top: 15px;
+    color: #232323;
+}
+
+.skill_card p {
+    margin-top: 8px;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    color: #666565;
+    line-height: 20px;
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .skill_card {
+        height: auto;
+        /* More space between cards on medium screens */
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .skill_card {
+        width: 30%;
+        height: auto;
+        /* More space between cards on medium screens */
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 992px) {
+    .skill_card {
+        width: 45%;
+        height: auto;
+        /* Two cards per row on tablet screens */
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 568px) {
+    .skill_card {
+        width: 100%;
+        /* Full width for small screens */
+        /* Adjust top margin for better spacing */
+    }
+
+    .skill_sub_container {
+        justify-content: center;
+        /* Center cards on small screens */
+    }
+}

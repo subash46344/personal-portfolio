@@ -1,6 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./ContactStyle.css";
 import emailjs from '@emailjs/browser';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +13,14 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state variable
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true,     // Whether animation should happen only once
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +57,7 @@ const Contact = () => {
         .then(
           () => {
             console.log('SUCCESS!');
-            setIsSubmitted(true); // Set form as submitted
+            setIsSubmitted(true);
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -62,7 +71,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact_container">
-      <div className="resume_heading">
+      <div className="resume_heading" data-aos="fade-up">
         <h2>Contact</h2>
         <p className="resume_heading_line"></p>
         <p className="resume_heading_paragraph">
@@ -71,21 +80,21 @@ const Contact = () => {
         </p>
       </div>
       <div className="contact_container_block">
-        <div className="contact_container_block_card">
+        <div className="contact_container_block_card" data-aos="fade-right">
           <i className="fa fa-map-marker"></i>
           <div className="contact_container_block_card_info">
             <h3>Address</h3>
             <p>Hn. 485 Mamura, Noida, India 201305</p>
           </div>
         </div>
-        <div className="contact_container_block_card">
+        <div className="contact_container_block_card" data-aos="fade-right">
           <i className="fa fa-phone"></i>
           <div className="contact_container_block_card_info">
             <h3>Call Us</h3>
             <p>+91 7492074655</p>
           </div>
         </div>
-        <div className="contact_container_block_card">
+        <div className="contact_container_block_card" data-aos="fade-right">
           <i className="fa fa-envelope"></i>
           <div className="contact_container_block_card_info">
             <h3>Email Us</h3>
@@ -95,9 +104,9 @@ const Contact = () => {
       </div>
 
       {isSubmitted ? (
-        <h1 className="submission_status">Your Application Form is submitted successfully.</h1>
+        <h1 className="submission_status" data-aos="zoom-in">Your Application Form is submitted successfully.</h1>
       ) : (
-        <form className={`contact_sub_container ${isSubmitted ? 'hide' : ''}`} ref={form} onSubmit={sendEmail}>
+        <form className={`contact_sub_container ${isSubmitted ? 'hide' : ''}`} ref={form} onSubmit={sendEmail} data-aos="fade-up">
           <div className="contact_sub_container_info">
             <input
               type="text"

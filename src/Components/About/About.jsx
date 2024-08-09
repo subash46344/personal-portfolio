@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./AboutStyle.css";
 import AboutImg from "./../../Assets/profile1_img.jpg";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once while scrolling down
+    });
+  }, []);
+
   return (
     <div id="about" className="about_container">
       <div className="about_sub_container">
-        <div className="about_sub_container_card_left">
+        <div className="about_sub_container_card_left" data-aos="fade-right">
           <div className="about_sub_container_card_left_content">
-            <img src={AboutImg} alt="" />
+            <img src={AboutImg} alt="Profile" />
             <div className="about_sub_container_card_left_content_intro">
-              <h className="intro_text">
+              <p className="intro_text">
                 <strong>Name:</strong> <span>Subash Pandit</span>{" "}
-              </h>
+              </p>
               <p className="intro_text">
                 <strong>Profile:</strong> <span>React JS Developer</span>{" "}
               </p>
@@ -22,45 +31,26 @@ const About = () => {
               <p className="intro_text">
                 <strong>Phone:</strong> <span>+91 7492074655</span>{" "}
               </p>
+              <p className="intro_text">
+                <strong>Location:</strong> <span>Mamura, Noida, Uttar Pradesh</span>{" "}
+              </p>
             </div>
           </div>
-          <div className="about_sub_container_card_left_content_skills">
-            <h2>Skills</h2>
-            <div className="progress">
-              <div className="skills_progress">
-                <span>HTML</span>
-                <i>100%</i>
-              </div>
-              <p className="progress_line"></p>
-              <p className="progress_line2" style={{ width: "100%" }}></p>
-            </div>
-            <div className="progress">
-              <div className="skills_progress">
-                <span>CSS</span>
-                <i>95%</i>
-              </div>
-              <p className="progress_line"></p>
-              <p className="progress_line2" style={{ width: "95%" }}></p>
-            </div>
-            <div className="progress">
-              <div className="skills_progress">
-                <span>JavaScript</span>
-                <i>90%</i>
-              </div>
-              <p className="progress_line"></p>
-              <p className="progress_line2" style={{ width: "90%" }}></p>
-            </div>
-            <div className="progress">
-              <div className="skills_progress">
-                <span>React JS</span>
-                <i>85%</i>
-              </div>
-              <p className="progress_line"></p>
-              <p className="progress_line2" style={{ width: "85%" }}></p>
-            </div>
+           <h2 className="heading">Sumary</h2>
+          <div className="resume_content">
+            <h3>SUBASH PANDIT</h3>
+            <p>
+              <i>
+                I have completed two websites, where I developed dynamic and
+                responsive user interfaces and collaborated with the team using
+                GitLab for version control. I am skilled in using IDEs like
+                Atom, VS Code, and Jupyter Notebook and eager to work on
+                interesting projects and learn new things with a team.
+              </i>
+            </p>
           </div>
         </div>
-        <div className="about_sub_container_card_right">
+        <div className="about_sub_container_card_right" data-aos="fade-down">
           <div className="about_heading">
             <h2>About me</h2>
             <div></div>
@@ -75,16 +65,15 @@ const About = () => {
             grades under the JAC Board.
           </p>
           <p className="about_text">
-            I have experience working at NoteG Technology Pvt. Ltd., where I did
-            a six-month internship. I worked on creating user interfaces with
-            React JS and collaborated with my team using GitLab for version
-            control.
+            I have work experience on Frontend Development, Web Development.I
+            worked on creating user interfaces with React JS and collaborated
+            with my team using GitLab for version control.
           </p>
           <p className="about_text">
-            I have built an e-commerce website that includes features like a
-            product catalog, shopping cart, user authentication, and order
-            management. I also developed a money loan management system for
-            handling loan applications, approvals, and repayment tracking.
+            I have built an money crest for handling loan
+            applications, approvals, EMI Calculator, and repayment tracking. I also developed a
+            e-commerce website that includes features like a product catalog,
+            shopping cart, user authentication, and order management.
           </p>
           <p className="about_text">
             I enjoy working on interesting projects and learning new things with
