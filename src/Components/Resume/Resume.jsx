@@ -1,19 +1,10 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import "./ResumeStyle.css";
 
 const Resume = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Duration of the animation in milliseconds
-      once: true,     // Whether animation should happen only once
-    });
-  }, []);
-
   return (
     <div id="resume" className="resume_container">
-      <div className="resume_heading" data-aos="fade-up">
+      <div className="resume_heading" >
         <h2>Resume</h2>
         <p className="resume_heading_line"></p>
         <p className="resume_heading_paragraph">
@@ -22,7 +13,7 @@ const Resume = () => {
         </p>
       </div>
       <div className="resume_sub_container">
-        <div className="resume_sub_container_card" data-aos="fade-right">
+        <div className="resume_sub_container_card">
           <h2 className="heading">Education</h2>
           <div className="resume_content">
             <h3>BACHELOR OF ENGINEERING</h3>
@@ -35,7 +26,7 @@ const Resume = () => {
               developed a strong foundation in both theoretical and practical
               aspects of the field. The coursework included subjects such as
               electrical circuits, control systems, power electronics,
-              microprocessors, and embedded systems.
+              microprocessors, and embedded systems
             </p>
           </div>
           <div className="resume_content">
@@ -52,7 +43,7 @@ const Resume = () => {
             </p>
           </div>
         </div>
-        <div className="resume_sub_container_card" data-aos="fade-left">
+        <div className="resume_sub_container_card">
           <h2 className="heading">Professional Experience</h2>
           <div className="resume_content">
             <h3>FRONTEND DEVELOPER SPECIALIST</h3>
@@ -77,7 +68,7 @@ const Resume = () => {
                 integrate frontend components.
               </li>
               <li>
-                Provided support in troubleshooting and resolving bugs to
+                Provided support in trouble shooting and resolving bugs to
                 ensure smooth application performance.
               </li>
             </ul>

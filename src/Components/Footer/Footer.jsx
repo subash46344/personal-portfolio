@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
+import "./FooterStyle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./FooterStyle.css";
 
 const Footer = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duration of the animation in milliseconds
-      once: true,     // Whether animation should happen only once
+      duration: 1200, // Animation duration
+      once: true,     // Animation occurs only once while scrolling down
     });
   }, []);
 

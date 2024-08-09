@@ -1,27 +1,18 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import "./AboutStyle.css";
 import AboutImg from "./../../Assets/profile1_img.jpg";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once while scrolling down
-    });
-  }, []);
-
   return (
     <div id="about" className="about_container">
       <div className="about_sub_container">
-        <div className="about_sub_container_card_left" data-aos="fade-right">
-          <div className="about_sub_container_card_left_content">
-            <img src={AboutImg} alt="Profile" />
+        <div className="about_sub_container_card_left">
+          <div className="about_sub_container_card_left_content" >
+            <img src={AboutImg} alt="" />
             <div className="about_sub_container_card_left_content_intro">
-              <p className="intro_text">
+              <h className="intro_text">
                 <strong>Name:</strong> <span>Subash Pandit</span>{" "}
-              </p>
+              </h>
               <p className="intro_text">
                 <strong>Profile:</strong> <span>React JS Developer</span>{" "}
               </p>
@@ -36,12 +27,13 @@ const About = () => {
               </p>
             </div>
           </div>
+          
            <h2 className="heading">Sumary</h2>
           <div className="resume_content">
             <h3>SUBASH PANDIT</h3>
             <p>
               <i>
-                I have completed two websites, where I developed dynamic and
+                I have completed two website., where I developed dynamic and
                 responsive user interfaces and collaborated with the team using
                 GitLab for version control. I am skilled in using IDEs like
                 Atom, VS Code, and Jupyter Notebook and eager to work on
@@ -50,7 +42,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="about_sub_container_card_right" data-aos="fade-down">
+        <div className="about_sub_container_card_right">
           <div className="about_heading">
             <h2>About me</h2>
             <div></div>
