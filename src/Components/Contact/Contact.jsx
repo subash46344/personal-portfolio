@@ -62,7 +62,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact_container">
-      <div className="resume_heading">
+      <div className="resume_heading" data-aos="fade-up">
         <h2>Contact</h2>
         <p className="resume_heading_line"></p>
         <p className="resume_heading_paragraph">
@@ -70,7 +70,7 @@ const Contact = () => {
           consectetur velit
         </p>
       </div>
-      <div className="contact_container_block">
+      <div className="contact_container_block" data-aos="zoom-in" >
         <div className="contact_container_block_card">
           <i className="fa fa-map-marker"></i>
           <div className="contact_container_block_card_info">
@@ -97,7 +97,7 @@ const Contact = () => {
       {isSubmitted ? (
         <h1 className="submission_status">Your Application Form is submitted successfully.</h1>
       ) : (
-        <form className={`contact_sub_container ${isSubmitted ? 'hide' : ''}`} ref={form} onSubmit={sendEmail}>
+        <form className={`contact_sub_container ${isSubmitted ? 'hide' : ''}`} ref={form} onSubmit={sendEmail} data-aos="fade-up">
           <div className="contact_sub_container_info">
             <input
               type="text"

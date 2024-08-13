@@ -7,9 +7,11 @@ const About = () => {
     <div id="about" className="about_container">
       <div className="about_sub_container">
         <div className="about_sub_container_card_left">
-          <div className="about_sub_container_card_left_content" >
-            <img src={AboutImg} alt="" />
-            <div className="about_sub_container_card_left_content_intro">
+          <div
+            className="about_sub_container_card_left_content"
+          >
+            <img src={AboutImg} alt="" data-aos="zoom-in" />
+            <div className="about_sub_container_card_left_content_intro" data-aos="zoom-out">
               <h className="intro_text">
                 <strong>Name:</strong> <span>Subash Pandit</span>{" "}
               </h>
@@ -23,13 +25,16 @@ const About = () => {
                 <strong>Phone:</strong> <span>+91 7492074655</span>{" "}
               </p>
               <p className="intro_text">
-                <strong>Location:</strong> <span>Mamura, Noida, Uttar Pradesh</span>{" "}
+                <strong>Location:</strong>{" "}
+                <span>Mamura, Noida, Uttar Pradesh</span>{" "}
               </p>
             </div>
           </div>
-          
-           <h2 className="heading">Sumary</h2>
-          <div className="resume_content">
+
+          <h2 className="heading" data-aos="fade-up">
+            Sumary
+          </h2>
+          <div className="resume_content" data-aos="fade-up">
             <h3>SUBASH PANDIT</h3>
             <p>
               <i>
@@ -43,11 +48,11 @@ const About = () => {
           </div>
         </div>
         <div className="about_sub_container_card_right">
-          <div className="about_heading">
+          <div className="about_heading" data-aos="fade-up">
             <h2>About me</h2>
             <div></div>
           </div>
-          <p className="about_text">
+          <p className="about_text" data-aos="fade-up">
             I am Subash Pandit, a dedicated and passionate software engineer
             with a solid foundation in JavaScript, React JS, HTML, and CSS. I
             hold a B.Tech in Electrical and Electronics Engineering from IES
@@ -56,18 +61,18 @@ const About = () => {
             for excellence, evident from my performance in both 12th and 10th
             grades under the JAC Board.
           </p>
-          <p className="about_text">
+          <p className="about_text" data-aos="fade-up">
             I have work experience on Frontend Development, Web Development.I
             worked on creating user interfaces with React JS and collaborated
             with my team using GitLab for version control.
           </p>
-          <p className="about_text">
-            I have built an money crest for handling loan
-            applications, approvals, EMI Calculator, and repayment tracking. I also developed a
-            e-commerce website that includes features like a product catalog,
+          <p className="about_text" data-aos="fade-up">
+            I have built an money crest for handling loan applications,
+            approvals, EMI Calculator, and repayment tracking. I also developed
+            a e-commerce website that includes features like a product catalog,
             shopping cart, user authentication, and order management.
           </p>
-          <p className="about_text">
+          <p className="about_text" data-aos="fade-up">
             I enjoy working on interesting projects and learning new things with
             a team. I am excited to bring my skills to a team that values
             collaboration and innovation.

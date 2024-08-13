@@ -3,7 +3,7 @@ import "./ResumeStyle.css";
 
 const Resume = () => {
   return (
-    <div id="resume" className="resume_container">
+    <div id="resume" className="resume_container" data-aos="fade-up">
       <div className="resume_heading" >
         <h2>Resume</h2>
         <p className="resume_heading_line"></p>
@@ -13,7 +13,7 @@ const Resume = () => {
         </p>
       </div>
       <div className="resume_sub_container">
-        <div className="resume_sub_container_card">
+        <div className="resume_sub_container_card" data-aos="fade-up">
           <h2 className="heading">Education</h2>
           <div className="resume_content">
             <h3>BACHELOR OF ENGINEERING</h3>
@@ -29,7 +29,7 @@ const Resume = () => {
               microprocessors, and embedded systems
             </p>
           </div>
-          <div className="resume_content">
+          <div className="resume_content"  data-aos="fade-up">
             <h3>INTERMEDIATE OF JAC</h3>
             <span>2018 - 2020</span>
             <p style={{ marginTop: "10px", fontSize: "25px" }}>
@@ -43,7 +43,7 @@ const Resume = () => {
             </p>
           </div>
         </div>
-        <div className="resume_sub_container_card">
+        <div className="resume_sub_container_card" data-aos="fade-up">
           <h2 className="heading">Professional Experience</h2>
           <div className="resume_content">
             <h3>FRONTEND DEVELOPER SPECIALIST</h3>

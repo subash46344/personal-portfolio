@@ -72,7 +72,7 @@ function Skill() {
 
   return (
     <div id="skill" className="skill_container">
-      <div className="resume_heading">
+      <div className="resume_heading" data-aos="zoom-in" >
         <h2>My Skills</h2>
         <p className="resume_heading_line"></p>
         <p className="resume_heading_paragraph">
